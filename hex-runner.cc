@@ -160,6 +160,10 @@ int main(int argc, char* argv[]) {
   return 0;
 }
 
+/*
+ * convert a binary string to a hex string with twice the length.
+ * note that the conversion is currently performed on a byte-to-byte basis.
+ */
 static void binary2hex(std::string* input) {
   char tmp[3];
   const size_t len = input->size();
@@ -171,6 +175,10 @@ static void binary2hex(std::string* input) {
   }
 }
 
+/*
+ * convert a hex string to a binary string with half the length.
+ * note that the conversion is currently performed on a byte-to-byte basis.
+ */
 static void hex2binary(std::string* input) {
   char tmp[3];
   unsigned int h = 0;
